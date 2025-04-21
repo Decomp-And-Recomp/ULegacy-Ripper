@@ -34,7 +34,7 @@ jobs:
           ls -R ./Source/0Bins/Publish/AssetRipper_win_x64
 
       - name: Upload AssetRipper Windows x64
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: AssetRipper_win_x64
           path: ./Source/0Bins/Publish/AssetRipper_win_x64/*
@@ -66,7 +66,7 @@ jobs:
           ls -R ./Source/0Bins/Publish/AssetRipper_win_arm64
 
       - name: Upload AssetRipper Windows arm64
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: AssetRipper_win_arm64
           path: ./Source/0Bins/Publish/AssetRipper_win_arm64/*
@@ -101,7 +101,7 @@ jobs:
           zip -r AssetRipper.zip *
 
       - name: Upload AssetRipper Linux x64
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: AssetRipper_linux_x64
           path: ./Source/0Bins/Publish/AssetRipper_linux_x64/AssetRipper.zip
@@ -136,7 +136,7 @@ jobs:
           zip -r AssetRipper.zip *
 
       - name: Upload AssetRipper Linux arm64
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: AssetRipper_linux_arm64
           path: ./Source/0Bins/Publish/AssetRipper_linux_arm64/AssetRipper.zip
@@ -171,7 +171,7 @@ jobs:
           zip -r AssetRipper.zip *
 
       - name: Upload AssetRipper Mac x64
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: AssetRipper_mac_x64
           path: ./Source/0Bins/Publish/AssetRipper_mac_x64/AssetRipper.zip
@@ -206,7 +206,7 @@ jobs:
           zip -r AssetRipper.zip *
 
       - name: Upload AssetRipper Mac arm64
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: AssetRipper_mac_arm64
           path: ./Source/0Bins/Publish/AssetRipper_mac_arm64/AssetRipper.zip
