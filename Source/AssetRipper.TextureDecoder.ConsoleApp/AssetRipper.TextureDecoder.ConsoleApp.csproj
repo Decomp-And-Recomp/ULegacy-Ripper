@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<IsTrimmable>true</IsTrimmable>
+		<OutputPath>..\0Bins\Other\AssetRipper.TextureDecoder.ConsoleApp\$(Configuration)\</OutputPath>
+		<IntermediateOutputPath>..\0Bins\obj\AssetRipper.TextureDecoder.ConsoleApp\$(Configuration)\</IntermediateOutputPath>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="StbImageWriteSharp" Version="1.16.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\AssetRipper.TextureDecoder\AssetRipper.TextureDecoder.csproj" />
+	</ItemGroup>
+
+</Project>

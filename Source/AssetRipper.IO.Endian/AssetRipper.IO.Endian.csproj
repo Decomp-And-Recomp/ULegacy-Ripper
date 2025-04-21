@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<IsTrimmable>true</IsTrimmable>
+		<OutputPath>..\0Bins\Other\AssetRipper.IO.Endian\$(Configuration)\</OutputPath>
+		<IntermediateOutputPath>..\0Bins\obj\AssetRipper.IO.Endian\$(Configuration)\</IntermediateOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AssetRipper.Primitives" Version="2.0.1" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<IsTrimmable>true</IsTrimmable>
+		<OutputPath>..\0Bins\Other\XARipper.Conversion\$(Configuration)\</OutputPath>
+		<IntermediateOutputPath>..\0Bins\obj\XARipper.Conversion\$(Configuration)\</IntermediateOutputPath>
+	</PropertyGroup>
+
+</Project>

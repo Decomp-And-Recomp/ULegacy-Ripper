@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<IsTrimmable>true</IsTrimmable>
+		<OutputPath>..\0Bins\Other\AssetRipper.Processing\$(Configuration)\</OutputPath>
+		<IntermediateOutputPath>..\0Bins\obj\AssetRipper.Processing\$(Configuration)\</IntermediateOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\AssetRipper.Import\AssetRipper.Import.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="AssetRipper.SourceGenerated">
+			<SpecificVersion>False</SpecificVersion>
+			<HintPath>../Libraries/AssetRipper.SourceGenerated.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>
