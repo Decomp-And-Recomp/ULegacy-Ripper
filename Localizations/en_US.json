@@ -20,7 +20,7 @@
     "audio_format_force_wav": "Convert to WAV",
     "audio_format_force_wav_description": "Convert all audio files to WAV files. Not recommended if importing into unity, as it may recompress files, causing a loss of quality.",
     "audio_format_native": "Raw",
-    "audio_format_native_description": "Raw FSB Audio. Cannot be imported into Unity, so only use this if you're an advanced user.",
+    "audio_format_native_description": "Exports original sound formats if game was built with an older Unity version, otherwise exports raw FSB data that cannot be loaded into Unity.",
     "audio_format_yaml": "Yaml",
     "audio_format_yaml_description": "Export as a yaml asset and resS file. This is a safe option and is the backup when things go wrong.",
     "bundle": "Bundle",
