@@ -163,9 +163,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.Checksum.Tests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.GUI.Electron", "Source\AssetRipper.GUI.Electron\AssetRipper.GUI.Electron.csproj", "{ECBFE50F-909A-41B9-A3FF-19ACB33574EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetRipper.GUI.Licensing", "Source\AssetRipper.GUI.Licensing\AssetRipper.GUI.Licensing.csproj", "{ED4D8B01-2C3B-412B-981B-986FBA6FB2FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.GUI.Licensing", "Source\AssetRipper.GUI.Licensing\AssetRipper.GUI.Licensing.csproj", "{ED4D8B01-2C3B-412B-981B-986FBA6FB2FD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.Decompilation.CSharp", "Source\AssetRipper.Decompilation.CSharp\AssetRipper.Decompilation.CSharp.csproj", "{82566A68-BF9B-4B2F-8B57-2137B31CF197}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.TextureDecoder.ColorGenerator", "Source\AssetRipper.TextureDecoder.ColorGenerator\AssetRipper.TextureDecoder.ColorGenerator.csproj", "{00C10C73-9E24-412C-AE60-729213CE2CCC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.TextureDecoder", "Source\AssetRipper.TextureDecoder\AssetRipper.TextureDecoder.csproj", "{877A7E65-6F82-4C4E-BEF1-B12C2BC6C231}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.TextureDecoder.Benchmarks", "Source\AssetRipper.TextureDecoder.Benchmarks\AssetRipper.TextureDecoder.Benchmarks.csproj", "{636B68FF-0929-4CA1-983D-6FCCF0A8EBBC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.TextureDecoder.ConsoleApp", "Source\AssetRipper.TextureDecoder.ConsoleApp\AssetRipper.TextureDecoder.ConsoleApp.csproj", "{E99CE993-E7CF-4A53-BCAC-EBA85797641A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.TextureDecoder.Paths", "Source\AssetRipper.TextureDecoder.Paths\AssetRipper.TextureDecoder.Paths.csproj", "{7F81A153-3964-4801-ADC8-FDAAAAD00D2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.TextureDecoder.SourceGeneration.Common", "Source\AssetRipper.TextureDecoder.SourceGeneration.Common\AssetRipper.TextureDecoder.SourceGeneration.Common.csproj", "{1E1C5AF6-6A37-491D-8579-050DEDDD0636}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.TextureDecoder.TestGenerator", "Source\AssetRipper.TextureDecoder.TestGenerator\AssetRipper.TextureDecoder.TestGenerator.csproj", "{06C1F3E0-3C07-4BBC-8E9C-5B119749DC07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetRipper.TextureDecoder.Tests", "Source\AssetRipper.TextureDecoder.Tests\AssetRipper.TextureDecoder.Tests.csproj", "{25752770-46A0-4F09-97A9-8DEF0698C8AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -353,6 +369,38 @@ Global
 		{82566A68-BF9B-4B2F-8B57-2137B31CF197}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82566A68-BF9B-4B2F-8B57-2137B31CF197}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82566A68-BF9B-4B2F-8B57-2137B31CF197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00C10C73-9E24-412C-AE60-729213CE2CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00C10C73-9E24-412C-AE60-729213CE2CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00C10C73-9E24-412C-AE60-729213CE2CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00C10C73-9E24-412C-AE60-729213CE2CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{877A7E65-6F82-4C4E-BEF1-B12C2BC6C231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{877A7E65-6F82-4C4E-BEF1-B12C2BC6C231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{877A7E65-6F82-4C4E-BEF1-B12C2BC6C231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{877A7E65-6F82-4C4E-BEF1-B12C2BC6C231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{636B68FF-0929-4CA1-983D-6FCCF0A8EBBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{636B68FF-0929-4CA1-983D-6FCCF0A8EBBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{636B68FF-0929-4CA1-983D-6FCCF0A8EBBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{636B68FF-0929-4CA1-983D-6FCCF0A8EBBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E99CE993-E7CF-4A53-BCAC-EBA85797641A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E99CE993-E7CF-4A53-BCAC-EBA85797641A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E99CE993-E7CF-4A53-BCAC-EBA85797641A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E99CE993-E7CF-4A53-BCAC-EBA85797641A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F81A153-3964-4801-ADC8-FDAAAAD00D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F81A153-3964-4801-ADC8-FDAAAAD00D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F81A153-3964-4801-ADC8-FDAAAAD00D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F81A153-3964-4801-ADC8-FDAAAAD00D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E1C5AF6-6A37-491D-8579-050DEDDD0636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E1C5AF6-6A37-491D-8579-050DEDDD0636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E1C5AF6-6A37-491D-8579-050DEDDD0636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E1C5AF6-6A37-491D-8579-050DEDDD0636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C1F3E0-3C07-4BBC-8E9C-5B119749DC07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C1F3E0-3C07-4BBC-8E9C-5B119749DC07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C1F3E0-3C07-4BBC-8E9C-5B119749DC07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C1F3E0-3C07-4BBC-8E9C-5B119749DC07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25752770-46A0-4F09-97A9-8DEF0698C8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25752770-46A0-4F09-97A9-8DEF0698C8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25752770-46A0-4F09-97A9-8DEF0698C8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25752770-46A0-4F09-97A9-8DEF0698C8AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
