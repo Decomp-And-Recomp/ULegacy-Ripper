@@ -26,6 +26,13 @@ namespace AssetRipper.Processing
 		/// </summary>
 		private static Utf8String LightingDataName { get; } = new("LightingData");
 
+		private bool ForceUpgradeToNewUnity;
+
+		public LightingDataProcessor(bool forceUpgrade)
+		{
+			ForceUpgradeToNewUnity = forceUpgrade;
+		}
+
 		public void Process(GameData gameData)
 		{
 			Logger.Info(LogCategory.Processing, "Lighting Data Assets");
@@ -37,10 +44,34 @@ namespace AssetRipper.Processing
 			foreach (SceneDefinition scene in gameData.GameBundle.Scenes)
 			{
 				//Only scenes can contain a LightmapSettings asset.
-				ILightmapSettings? lightmapSettings = scene.Assets.OfType<ILightmapSettings>().FirstOrDefault();
-				if (lightmapSettings is null)
+				ILightmapSettings? lightmapSettings = null;
+
+				int collectionIndex = -1;
+				long assetPath = -1;
+
+				for (int i = 0; i < scene.Collections.Count; i++)
+				{
+					foreach (KeyValuePair<long, IUnityObjectBase> asset in scene.Collections[i].Assets)
+					{
+						if (asset.Value is ILightmapSettings settings)
+						{
+							lightmapSettings = settings;
+							
+							collectionIndex = i;
+							assetPath = asset.Key;
+						}
+					}
+				}
+
+				if (lightmapSettings is null || collectionIndex == -1 || assetPath == -1)
 				{
 					continue;
+				}
+
+				if (ForceUpgradeToNewUnity)
+				{
+					lightmapSettings = ConvertLightmapSettings(processedCollection, lightmapSettings);
+					scene.Collections[collectionIndex].Assets[assetPath] = lightmapSettings;
 				}
 
 				lightmapSettingsDictionary.Add(lightmapSettings, scene);
@@ -94,6 +125,19 @@ namespace AssetRipper.Processing
 				}
 				SetPathsAndMainAsset(lightmapSettings, lightProbes, scene);
 			}
+		}
+
+		private static ILightmapSettings ConvertLightmapSettings(ProcessedAssetCollection collection, ILightmapSettings? originalSettings)
+		{
+			UnityVersion oldVersion = collection.Version;
+			collection.Version = new UnityVersion(2017, 4, 40);
+
+			ILightmapSettings? lightmapSettings = collection.CreateAsset((int)ClassIDType.LightmapSettings, LightmapSettings.Create);
+
+			collection.Version = oldVersion;
+			lightmapSettings.CopyValues(originalSettings, new PPtrConverter(originalSettings!, lightmapSettings));
+
+			return lightmapSettings;
 		}
 
 		private static bool HasLightingData(ILightmapSettings lightmapSettings)

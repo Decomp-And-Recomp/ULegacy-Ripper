@@ -130,7 +130,7 @@ namespace AssetRipper.Export.UnityProjects
 				}
 				yield return new SceneDefinitionProcessor();
 				yield return new MainAssetProcessor();
-				yield return new LightingDataProcessor();
+				yield return new LightingDataProcessor(Settings.ForceUpgradeToNewUnity);
 				yield return new AnimatorControllerProcessor();
 				yield return new AudioMixerProcessor();
 				yield return new EditorFormatProcessor(Settings.BundledAssetsExportMode);
